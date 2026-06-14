@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
-import { OperationZonesChart } from "@/components/charts/OperationZonesChart";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { assetPaths } from "@/lib/constants";
 import { allies } from "@/data/allies";
 import { operationZones } from "@/data/zones";
 
@@ -28,8 +29,8 @@ export default function AliadosPage() {
               ))}
             </div>
             <div className="rounded-[2rem] bg-white p-8 shadow-soft">
-                <OperationZonesChart />
-                <div className="mt-4 grid gap-3">
+              <Image alt="Zonas de influencia EFAGRAM" className="w-full rounded-xl object-cover" height={400} src={assetPaths.zonaInfluencia} width={600} />
+              <div className="mt-4 grid gap-3">
                   {operationZones.map((zone) => (
                     <p key={zone.name} className="rounded-2xl bg-forest-50 p-4 text-sm text-slate-700">
                       <strong className="text-forest-900">{zone.name}:</strong> {zone.departments.join(", ")}

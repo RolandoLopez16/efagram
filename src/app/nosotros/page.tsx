@@ -1,10 +1,11 @@
 import { Check, Eye, HeartHandshake, Leaf, MapPin, Target, Users } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { ReactNode } from "react";
 
-import { ImpactChart } from "@/components/charts/ImpactChart";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { assetPaths } from "@/lib/constants";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = {
@@ -21,12 +22,12 @@ export default function NosotrosPage() {
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.8fr]">
           <div>
             <SectionTitle eyebrow="Reseña histórica" title="Nacidos para brindar manejo integrado y sostenible" description="La empresa Forestal y Agroambiental EFAGRAM SAS nace a partir de la necesidad de brindar un manejo integrado y sostenible de los recursos naturales en el departamento del Cauca, producto de las actividades relacionadas con el cultivo, cuidado, mantenimiento y cosecha de los bosques comerciales." />
-            <div className="mx-auto max-w-none text-slate-600">
+            <div className="mx-auto max-w-none text-justify text-slate-600">
               <p className="mb-5 leading-8">
                 EFAGRAM SAS se constituyó mediante Acta 001 del 28 de febrero de 2009 y se registró ante la Cámara de Comercio del Cauca el <strong>12 de diciembre de 2009</strong>. Inició sus actividades operativas en <strong>febrero de 2010</strong> y desde entonces centra su acción en la prestación de servicios agroforestales con exclusividad para <strong>Smurfit WestRock Cartón de Colombia</strong>.
               </p>
               <p className="leading-8">
-                Desarrollamos las actividades objeto dentro de las tres zonas configuradas por Smurfit WestRock: Zona Norte (Quindío, Risaralda), Zona Centro (Valle del Cauca) y Zona Sur (Cauca). Nuestro compromiso de prestar un servicio de calidad superior sigue vigente y nos permite constituirnos como un referente dentro del sector forestal colombiano.
+                Desarrollamos las actividades objeto dentro de las tres zonas configuradas por Smurfit WestRock: Zona Norte (Quindío, Tolima y Risaralda), Zona Centro (Valle del Cauca) y Zona Sur (Cauca). Nuestro compromiso de prestar un servicio de calidad superior sigue vigente y nos permite constituirnos como un referente dentro del sector forestal colombiano con certificación RUC.
               </p>
             </div>
           </div>
@@ -87,8 +88,8 @@ export default function NosotrosPage() {
               EFAGRAM articula operación forestal, empleo rural, sostenibilidad y acciones comunitarias como pilares de su presencia en campo.
             </p>
           </div>
-          <div className="rounded-[2rem] bg-white p-6 shadow-soft">
-            <ImpactChart />
+          <div className="overflow-hidden rounded-[2rem] shadow-soft">
+            <Image alt="Operación forestal EFAGRAM" className="w-full object-contain" height={400} src={assetPaths.harvester2} width={600} />
           </div>
         </div>
       </section>

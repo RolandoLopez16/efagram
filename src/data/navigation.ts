@@ -4,5 +4,4 @@ export const navigation = [
   { label: "Servicios", href: "/servicios" },
   { label: "Noticias", href: "/noticias" },
   { label: "Aliados", href: "/aliados" },
-  { label: "Contacto", href: "/contacto" },
 ];

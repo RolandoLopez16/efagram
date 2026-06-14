@@ -9,4 +9,6 @@ export const assetPaths = {
   forestCanopy: "/images/dosel-bosque.jpg",
   verticalForest: "/images/bosque-pinos-vertical.jpg",
   logoCompleto: "/images/LogoCompleto.png",
+  zonaInfluencia: "/images/ZonaInfluencia.jpg",
+  harvester2: "/images/Harvester2.jpeg",
 };
