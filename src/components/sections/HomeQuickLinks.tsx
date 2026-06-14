@@ -51,10 +51,7 @@ export function HomeQuickLinks() {
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-forest-700">Explore EFAGRAM</p>
             <h2 className="max-w-3xl font-alegreya text-4xl font-semibold tracking-tight text-forest-900 md:text-5xl">
-              Cono<span className="forest-inline-text">z</span>ca{" "}
-              ca<span className="forest-inline-text">d</span>a{" "}
-              á<span className="forest-inline-text">e</span>a de{" "}
-              E<span className="forest-inline-text">F</span>AG<span className="forest-inline-text">R</span>AM
+              Conozca cada área de <span className="forest-inline-text">EFAGRAM</span>
             </h2>
           </div>
           <p className="max-w-md text-sm leading-7 text-slate-600">

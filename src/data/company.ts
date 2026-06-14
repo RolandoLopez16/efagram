@@ -7,6 +7,10 @@ export const company = {
   fullAddress: "Transversal 9 #60AN-41, barrio Bellavista, Popayán, Cauca, Colombia",
   whatsapp: "320 675 8351",
   whatsappUrl: "https://wa.me/573206758351",
+  phoneHref: "tel:+573206758351",
+  emailHref: "mailto:gerencia@efagram.com",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Transversal%209%20%2360AN-41%20Popayan%20Cauca%20Colombia",
+  siteUrl: "https://www.efagram.com",
   email: "gerencia@efagram.com",
   tagline: "Establecimiento, mantenimiento y cosecha de bosques",
   description:
