@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Alegreya Local";
+  src: url("/fonts/Alegreya-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --font-alegreya: "Alegreya Local";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(ellipse at 50% 0%, #d7ead9 0%, #ffffff 15%, #ffffff 85%, #f7f4ec 100%);
+  color: #0f172a;
+}
+
+.forest-inline-text {
+  -webkit-text-stroke: 0.8px #0e3b22;
+  -webkit-text-fill-color: transparent;
+  paint-order: stroke fill;
+  text-shadow: 1px 1px 0 rgba(247, 244, 236, 0.5);
+}
+
+::selection {
+  background: #175c2d;
+  color: #ffffff;
+}
