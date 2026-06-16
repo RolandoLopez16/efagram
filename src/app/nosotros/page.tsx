@@ -10,7 +10,7 @@ import { company } from "@/data/company";
 
 export const metadata: Metadata = {
   title: "Nosotros",
-  description: "Conozca la historia, misión, visión y valores de EFAGRAM S.A.S., empresa forestal y agroambiental con operación en Cauca, Valle del Cauca, Quindío y Risaralda.",
+  description: "Conozca la historia, misión, visión y valores de EFAGRAM S.A.S., empresa forestal y agroambiental con operación en Cauca, Valle del Cauca, Caldas, Quindío y Risaralda.",
 };
 
 export default function NosotrosPage() {
@@ -27,7 +27,7 @@ export default function NosotrosPage() {
                 EFAGRAM SAS se constituyó mediante Acta 001 del 28 de febrero de 2009 y se registró ante la Cámara de Comercio del Cauca el <strong>12 de diciembre de 2009</strong>. Inició sus actividades operativas en <strong>febrero de 2010</strong> y desde entonces centra su acción en la prestación de servicios agroforestales con exclusividad para <strong>Smurfit WestRock Cartón de Colombia</strong>.
               </p>
               <p className="leading-8">
-                Desarrollamos las actividades objeto dentro de las tres zonas configuradas por Smurfit WestRock: Zona Norte (Quindío, Tolima y Risaralda), Zona Centro (Valle del Cauca) y Zona Sur (Cauca). Nuestro compromiso de prestar un servicio de calidad superior sigue vigente y nos permite constituirnos como un referente dentro del sector forestal colombiano con certificación RUC.
+                Desarrollamos las actividades objeto dentro de las tres zonas configuradas por Smurfit WestRock: Zona Norte (Caldas, Quindío y Risaralda), Zona Centro (Valle del Cauca) y Zona Sur (Cauca). Nuestro compromiso de prestar un servicio de calidad superior sigue vigente y nos permite constituirnos como un referente dentro del sector forestal colombiano con certificación RUC.
               </p>
             </div>
           </div>
@@ -36,7 +36,7 @@ export default function NosotrosPage() {
             <InfoLine icon={<Leaf size={20} />} label="NIT" value={company.nit} />
             <InfoLine icon={<Users size={20} />} label="Fundación" value="12 de diciembre de 2009" />
             <InfoLine icon={<HeartHandshake size={20} />} label="Cliente exclusivo" value="Smurfit WestRock" />
-            <InfoLine icon={<Target size={20} />} label="Cobertura" value="Cauca, Valle, Quindío, Risaralda" />
+            <InfoLine icon={<Target size={20} />} label="Cobertura" value="Caldas, Cauca, Valle, Quindío, Risaralda" />
           </div>
         </div>
       </section>
@@ -89,7 +89,7 @@ export default function NosotrosPage() {
             </p>
           </div>
           <div className="overflow-hidden rounded-[2rem] shadow-soft">
-            <Image alt="Operación forestal EFAGRAM" className="w-full object-contain" height={400} src={assetPaths.harvester2} width={600} />
+            <Image alt="Equipo operativo de EFAGRAM S.A.S. en jornada forestal de campo" className="h-full w-full object-cover" height={400} src="/images/GrupoTrabajo.webp" width={600} />
           </div>
         </div>
       </section>

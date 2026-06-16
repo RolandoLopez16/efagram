@@ -1,7 +1,7 @@
 export const operationZones = [
   {
     name: "Zona Norte",
-    departments: ["Quindío", "Risaralda"],
+    departments: ["Caldas", "Quindío", "Risaralda"],
     value: 2,
   },
   {

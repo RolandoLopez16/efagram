@@ -1,9 +1,11 @@
 import { Mail, MapPin, MessageCircle } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 import { ContactForm } from "@/components/sections/ContactForm";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { assetPaths } from "@/lib/constants";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = {
@@ -15,8 +17,9 @@ export default function ContactoPage() {
   return (
     <>
       <PageHeader title="Contacto" description="Estamos disponibles para atender solicitudes relacionadas con servicios forestales, operativos y agroambientales." />
-      <section className="bg-[radial-gradient(ellipse_at_40%_20%,#eef7ef_0%,#ffffff_70%,#f7f4ec_100%)] px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
+      <section className="relative overflow-hidden bg-[radial-gradient(ellipse_at_40%_20%,#eef7ef_0%,#ffffff_70%,#f7f4ec_100%)] px-4 py-20 sm:px-6 lg:px-8">
+        <Image alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.04]" fill sizes="100vw" src={assetPaths.hero} />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="grid gap-5">
             <ContactInfo external icon={<MapPin size={22} />} title="Oficina principal" text={company.fullAddress} href={company.mapsUrl} />
             <ContactInfo external icon={<MessageCircle size={22} />} title="WhatsApp" text={company.whatsapp} href={company.whatsappUrl} />

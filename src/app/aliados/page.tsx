@@ -9,15 +9,16 @@ import { operationZones } from "@/data/zones";
 
 export const metadata: Metadata = {
   title: "Aliados",
-  description: "Cliente exclusivo Smurfit WestRock y aliados estratégicos de EFAGRAM S.A.S. con presencia en Cauca, Valle del Cauca, Quindío y Risaralda.",
+  description: "Cliente exclusivo Smurfit WestRock y aliados estratégicos de EFAGRAM S.A.S. con presencia en Cauca, Valle del Cauca, Caldas, Quindío y Risaralda.",
 };
 
 export default function AliadosPage() {
   return (
     <>
       <PageHeader title="Aliados" description="Relaciones empresariales y presencia operativa en zonas forestales del norte, centro y sur de Colombia." />
-      <section className="bg-[radial-gradient(ellipse_at_60%_30%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
+      <section className="relative overflow-hidden bg-[radial-gradient(ellipse_at_60%_30%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
+        <Image alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.04]" fill sizes="100vw" src={assetPaths.plantacionAerea} />
+        <div className="relative z-10 mx-auto max-w-7xl">
           <SectionTitle eyebrow="Clientes y aliados" title="Confianza institucional y cobertura regional" description="Desde 2010 prestamos servicios agroforestales con exclusividad para Smurfit WestRock Cartón de Colombia en las tres zonas configuradas para la operación." />
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="grid gap-5">

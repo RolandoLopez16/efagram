@@ -35,7 +35,7 @@ export function HomeHero() {
           <p className="mt-5 max-w-2xl text-base leading-7 text-slate-600 md:text-lg md:leading-8">
             Ejecutamos labores de establecimiento, mantenimiento y cosecha de bosques comerciales
             de pinos y eucaliptos como cliente preferencial de Smurfit WestRock en las zonas
-            Norte (Quindío, Risaralda), Centro (Valle del Cauca) y Sur (Cauca), brindando
+            Norte (Caldas, Quindío, Risaralda), Centro (Valle del Cauca) y Sur (Cauca), brindando
             soluciones integrales con calidad, seguridad y compromiso ambiental.
           </p>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs font-semibold text-slate-500">
@@ -91,10 +91,10 @@ export function HomeHero() {
         <div className="grid gap-4 md:grid-cols-[1.4fr_1fr]">
           <div className="relative row-span-2 overflow-hidden rounded-[2.5rem] bg-forest-900 shadow-soft transition duration-500 hover:-translate-y-1">
             <Image
-              alt="Plantación forestal gestionada por EFAGRAM"
+              alt="Vista aérea de plantaciones forestales operadas por EFAGRAM S.A.S."
               className="h-full w-full object-cover opacity-95 transition duration-700 hover:scale-105"
               height={680}
-              src={assetPaths.eucalyptus}
+              src={assetPaths.plantacionAerea}
               width={600}
               priority
             />
@@ -103,7 +103,7 @@ export function HomeHero() {
               <p className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.16em] text-emerald-100">
                 <span className="h-2 w-2 shrink-0 rounded-full bg-emerald-300" /> Popayán, Cauca
               </p>
-              <p className="mt-2 font-alegreya text-2xl font-semibold">Bosques comerciales de pinos y eucaliptos con manejo responsable.</p>
+              <p className="mt-2 font-alegreya text-2xl font-semibold">Cobertura forestal con manejo responsable en zonas de operación.</p>
             </div>
           </div>
 
@@ -119,10 +119,10 @@ export function HomeHero() {
 
           <div className="overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-soft transition duration-500 hover:-translate-y-1">
             <Image
-              alt="Detalle de pino en zona forestal"
+              alt="Bosque de pinos en zona de operación forestal de EFAGRAM S.A.S."
               className="h-44 w-full object-cover transition duration-700 hover:scale-105"
               height={260}
-              src={assetPaths.pineDetail}
+              src="/images/bosque-pinos-vertical.webp"
               width={460}
             />
           </div>

@@ -9,28 +9,28 @@ const quickLinks = [
     title: "Nosotros",
     href: "/nosotros",
     description: "Conozca la empresa, su ubicación y enfoque de trabajo.",
-    image: assetPaths.forestCanopy,
+    image: assetPaths.equipo,
     icon: Building2,
   },
   {
     title: "Servicios",
     href: "/servicios",
     description: "Explore nuestras labores forestales y agroambientales.",
-    image: assetPaths.harvester,
+    image: "/images/fw.webp",
     icon: Trees,
   },
   {
     title: "Aliados",
     href: "/aliados",
     description: "Revise aliados estratégicos y zonas de operación.",
-    image: assetPaths.eucalyptus,
+    image: assetPaths.plantacionAerea,
     icon: Handshake,
   },
   {
     title: "Noticias",
     href: "/noticias",
     description: "Actividad empresarial, comunidad y bienestar laboral.",
-    image: assetPaths.pineCloseup,
+    image: assetPaths.forestal2,
     icon: Newspaper,
   },
 ];
@@ -55,7 +55,7 @@ export function HomeQuickLinks() {
             </h2>
           </div>
           <p className="max-w-md text-sm leading-7 text-slate-600">
-            Cliente preferencial de Smurfit WestRock. Cobertura en zonas Norte (Quindío, Risaralda),
+            Cliente preferencial de Smurfit WestRock. Cobertura en zonas Norte (Caldas, Quindío, Risaralda),
             Centro (Valle del Cauca) y Sur (Cauca). Gestión forestal con compromiso rural.
           </p>
         </div>

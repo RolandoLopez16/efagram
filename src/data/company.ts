@@ -18,7 +18,7 @@ export const company = {
   founded: "12 de diciembre de 2009",
   operationsStart: "Febrero de 2010",
   exclusiveClient: "Smurfit WestRock Cartón de Colombia",
-  zones: ["Cauca", "Valle del Cauca", "Quindío", "Risaralda"],
+  zones: ["Caldas", "Cauca", "Valle del Cauca", "Quindío", "Risaralda"],
   mission:
     "EFAGRAM SAS es una empresa líder que ofrece una amplia gama de servicios forestales y agroambientales de alta calidad, que van desde el establecimiento de bosques hasta la restauración de ecosistemas degradados; comprometida con la gestión sostenible de los recursos naturales y la promoción del desarrollo rural en sus zonas de influencia, con un equipo de expertos altamente capacitados y precisos con el cumplimiento de los estándares de calidad y seguridad en cada una de sus actividades de silvicultura y cosecha.",
   vision:
