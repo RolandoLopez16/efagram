@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import type { ReactNode } from "react";
 
+import { ForestBackground } from "@/components/ui/ForestBackground";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionTitle } from "@/components/ui/SectionTitle";
-import { assetPaths } from "@/lib/constants";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ export default function NosotrosPage() {
     <>
       <PageHeader title="Nosotros" description="Empresa forestal y agroambiental que ejecuta labores de establecimiento, mantenimiento y cosecha de bosques comerciales de pinos y eucaliptos." />
 
-      <section className="bg-[radial-gradient(ellipse_at_20%_30%,#eef7ef_0%,#ffffff_70%,#f7f4ec_100%)] px-4 py-20 sm:px-6 lg:px-8">
+      <ForestBackground image="/images/4Nosotros.webp" className="bg-[radial-gradient(ellipse_at_20%_30%,#eef7ef_0%,#ffffff_70%,#f7f4ec_100%)] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.8fr]">
           <div>
             <SectionTitle eyebrow="Reseña histórica" title="Nacidos para brindar manejo integrado y sostenible" description="La empresa Forestal y Agroambiental EFAGRAM SAS nace a partir de la necesidad de brindar un manejo integrado y sostenible de los recursos naturales en el departamento del Cauca, producto de las actividades relacionadas con el cultivo, cuidado, mantenimiento y cosecha de los bosques comerciales." />
@@ -39,9 +39,9 @@ export default function NosotrosPage() {
             <InfoLine icon={<Target size={20} />} label="Cobertura" value="Caldas, Cauca, Valle, Quindío, Risaralda" />
           </div>
         </div>
-      </section>
+      </ForestBackground>
 
-      <section className="bg-[radial-gradient(ellipse_at_70%_50%,#d7ead9_0%,#eef7ef_50%,#ffffff_100%)] px-4 py-20 sm:px-6 lg:px-8">
+      <ForestBackground image="/images/2Nosotros.webp" className="bg-[radial-gradient(ellipse_at_70%_50%,#d7ead9_0%,#eef7ef_50%,#ffffff_100%)] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionTitle eyebrow="Propósito empresarial" title="Misión y visión" />
           <div className="grid gap-6 lg:grid-cols-2">
@@ -58,9 +58,9 @@ export default function NosotrosPage() {
             </div>
           </div>
         </div>
-      </section>
+      </ForestBackground>
 
-      <section className="bg-[radial-gradient(ellipse_at_50%_60%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
+      <ForestBackground image="/images/1Nosotros.webp" className="bg-[radial-gradient(ellipse_at_50%_60%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <SectionTitle eyebrow="Trayectoria y compromiso" title="Nuestros pilares" description="Seis fundamentos que aseguran un correcto desempeño interno y externo en cada una de nuestras operaciones." />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -77,9 +77,9 @@ export default function NosotrosPage() {
             ))}
           </div>
         </div>
-      </section>
+      </ForestBackground>
 
-      <section className="bg-[radial-gradient(ellipse_at_30%_80%,#d7ead9_0%,#eef7ef_50%,#f7f4ec_100%)] px-4 py-20 sm:px-6 lg:px-8">
+      <ForestBackground image="/images/3Nosotros.webp" className="bg-[radial-gradient(ellipse_at_30%_80%,#d7ead9_0%,#eef7ef_50%,#f7f4ec_100%)] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.18em] text-forest-700">Gestión integral</p>
@@ -92,7 +92,7 @@ export default function NosotrosPage() {
             <Image alt="Equipo operativo de EFAGRAM S.A.S. en jornada forestal de campo" className="h-full w-full object-cover" height={400} src="/images/GrupoTrabajo.webp" width={600} />
           </div>
         </div>
-      </section>
+      </ForestBackground>
     </>
   );
 }

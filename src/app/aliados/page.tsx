@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { ForestBackground } from "@/components/ui/ForestBackground";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { assetPaths } from "@/lib/constants";
@@ -16,9 +17,8 @@ export default function AliadosPage() {
   return (
     <>
       <PageHeader title="Aliados" description="Relaciones empresariales y presencia operativa en zonas forestales del norte, centro y sur de Colombia." />
-      <section className="relative overflow-hidden bg-[radial-gradient(ellipse_at_60%_30%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
-        <Image alt="" aria-hidden className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.04]" fill sizes="100vw" src={assetPaths.plantacionAerea} />
-        <div className="relative z-10 mx-auto max-w-7xl">
+      <ForestBackground image="/images/paisaje.webp" className="bg-[radial-gradient(ellipse_at_60%_30%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
           <SectionTitle eyebrow="Clientes y aliados" title="Confianza institucional y cobertura regional" description="Desde 2010 prestamos servicios agroforestales con exclusividad para Smurfit WestRock Cartón de Colombia en las tres zonas configuradas para la operación." />
           <div className="grid gap-8 lg:grid-cols-2">
             <div className="grid gap-5">
@@ -41,7 +41,7 @@ export default function AliadosPage() {
             </div>
           </div>
         </div>
-      </section>
+      </ForestBackground>
     </>
   );
 }

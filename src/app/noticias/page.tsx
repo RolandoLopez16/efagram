@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+import { ForestBackground } from "@/components/ui/ForestBackground";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { news } from "@/data/news";
 
@@ -13,7 +14,7 @@ export default function NoticiasPage() {
   return (
     <>
       <PageHeader title="Noticias" description="Actividades empresariales, acciones de bienestar laboral, operacion forestal y compromiso con las comunidades." />
-      <section className="bg-[radial-gradient(ellipse_at_30%_50%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
+      <ForestBackground image="/images/detalle-pino.webp" className="bg-[radial-gradient(ellipse_at_30%_50%,#f7f4ec_0%,#ffffff_60%,#eef7ef_100%)] px-4 py-20 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-3">
           {news.map((item) => (
             <article key={item.title} className="group rounded-[2rem] border border-forest-100 bg-cream p-7 shadow-sm transition hover:-translate-y-1">
@@ -26,7 +27,7 @@ export default function NoticiasPage() {
             </article>
           ))}
         </div>
-      </section>
+      </ForestBackground>
     </>
   );
 }

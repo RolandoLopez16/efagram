@@ -2,6 +2,7 @@ import { ArrowUpRight, Building2, Handshake, Newspaper, Trees } from "lucide-rea
 import Image from "next/image";
 import Link from "next/link";
 
+import { ForestBackground } from "@/components/ui/ForestBackground";
 import { assetPaths } from "@/lib/constants";
 
 const quickLinks = [
@@ -37,16 +38,8 @@ const quickLinks = [
 
 export function HomeQuickLinks() {
   return (
-    <section className="relative overflow-hidden bg-[radial-gradient(ellipse_at_70%_20%,#d7ead9_0%,#ffffff_60%,#f7f4ec_100%)] px-4 py-16 sm:px-6 lg:px-8">
-      <Image
-        alt=""
-        className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-[0.04]"
-        fill
-        sizes="100vw"
-        src={assetPaths.forestCanopy}
-        aria-hidden
-      />
-      <div className="relative z-10 mx-auto max-w-7xl">
+    <ForestBackground image="/images/dosel-bosque.webp" className="bg-[radial-gradient(ellipse_at_70%_20%,#d7ead9_0%,#ffffff_60%,#f7f4ec_100%)] px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-10 flex flex-col justify-between gap-5 md:flex-row md:items-end">
           <div>
             <p className="mb-3 text-xs font-bold uppercase tracking-[0.18em] text-forest-700">Explore EFAGRAM</p>
@@ -96,6 +89,6 @@ export function HomeQuickLinks() {
           })}
         </div>
       </div>
-    </section>
+    </ForestBackground>
   );
 }
