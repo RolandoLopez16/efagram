@@ -3,7 +3,8 @@
 import type { FormEvent, ReactNode } from "react";
 import { useMemo, useState } from "react";
 import { Button, Card, CardBody, Input, Textarea } from "@heroui/react";
-import { Mail, MessageCircle, Send } from "lucide-react";
+import { Mail, Send } from "lucide-react";
+import Image from "next/image";
 
 import { company } from "@/data/company";
 
@@ -55,7 +56,7 @@ export function ContactForm() {
               <Input
                 id="contact-name"
                 isRequired
-                classNames={{ input: "text-slate-900", inputWrapper: "bg-white" }}
+                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
                 name="name"
                 placeholder="Ej: Juan Pérez"
                 value={form.name}
@@ -67,7 +68,7 @@ export function ContactForm() {
               <Input
                 id="contact-phone"
                 isRequired
-                classNames={{ input: "text-slate-900", inputWrapper: "bg-white" }}
+                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
                 name="phone"
                 placeholder="Ej: 320 000 0000"
                 type="tel"
@@ -81,8 +82,8 @@ export function ContactForm() {
             <Input
               id="contact-email"
               isRequired
-              classNames={{ input: "text-slate-900", inputWrapper: "bg-white" }}
-              name="email"
+                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
+                name="email"
               placeholder="correo@empresa.com"
               type="email"
               value={form.email}
@@ -94,9 +95,9 @@ export function ContactForm() {
             <Textarea
               id="contact-message"
               isRequired
-              classNames={{ input: "text-slate-900", inputWrapper: "bg-white" }}
-              minRows={5}
-              name="message"
+                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
+                minRows={5}
+                name="message"
               placeholder="Cuente brevemente su solicitud"
               value={form.message}
               variant="bordered"
@@ -112,7 +113,7 @@ export function ContactForm() {
             </Button>
           </div>
           <a className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-forest-700 hover:text-forest-900 sm:justify-start" href={company.whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <MessageCircle size={16} /> Abrir WhatsApp sin formulario
+            <Image alt="WhatsApp" height={16} src="/images/whatsapp-svgrepo-com.svg" width={16} /> Abrir WhatsApp sin formulario
           </a>
         </form>
       </CardBody>

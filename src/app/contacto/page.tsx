@@ -1,5 +1,6 @@
-import { Mail, MapPin, MessageCircle } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { ReactNode } from "react";
 
 import { ContactForm } from "@/components/sections/ContactForm";
@@ -20,7 +21,7 @@ export default function ContactoPage() {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="grid gap-5">
             <ContactInfo external icon={<MapPin size={22} />} title="Oficina principal" text={company.fullAddress} href={company.mapsUrl} />
-            <ContactInfo external icon={<MessageCircle size={22} />} title="WhatsApp" text={company.whatsapp} href={company.whatsappUrl} />
+            <ContactInfo external icon={<Image alt="WhatsApp" height={22} src="/images/whatsapp-svgrepo-com.svg" width={22} />} title="WhatsApp" text={company.whatsapp} href={company.whatsappUrl} />
             <ContactInfo icon={<Mail size={22} />} title="Correo" text={company.email} href={company.emailHref} />
             <a className="rounded-[2rem] bg-forest-900 p-6 text-white transition hover:-translate-y-1 hover:shadow-soft" href={company.mapsUrl} target="_blank" rel="noopener noreferrer">
               <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white shadow-sm"><MapPin size={22} /></span>

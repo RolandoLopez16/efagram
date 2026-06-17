@@ -17,6 +17,7 @@ export function ForestBackground({ image, children, className = "" }: ForestBack
         fill
         sizes="100vw"
         src={image}
+        loading="eager"
       />
       <div className="relative z-10">{children}</div>
     </div>

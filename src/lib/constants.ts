@@ -1,6 +1,6 @@
 export const assetPaths = {
-  logo: "/images/logo-efagram.png",
-  logoWhite: "/images/logo-efagram-white.png",
+  logo: "/images/logo-efagram.webp",
+  logoWhite: "/images/logo-efagram-white.webp",
   hero: "/images/paisaje-forestal-efagram.webp",
   eucalyptus: "/images/plantacion-eucalipto.webp",
   harvester: "/images/operacion-harvester.webp",
@@ -8,7 +8,7 @@ export const assetPaths = {
   pineCloseup: "/images/detalle-pino.webp",
   forestCanopy: "/images/dosel-bosque.webp",
   verticalForest: "/images/bosque-pinos-vertical.webp",
-  logoCompleto: "/images/LogoCompleto.png",
+  logoCompleto: "/images/LogoCompleto.webp",
   zonaInfluencia: "/images/ZonaInfluencia.webp",
   harvester2: "/images/Harvester2.webp",
   plantacionAerea: "/images/plantacion desde el aire.webp",

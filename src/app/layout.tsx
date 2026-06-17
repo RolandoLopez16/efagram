@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { HeroUIProvider } from "@/components/providers/HeroUIProvider";
+import { SplashScreen } from "@/components/ui/SplashScreen";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { company } from "@/data/company";
 import { assetPaths } from "@/lib/constants";
@@ -96,6 +97,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="es">
       <body className={`${inter.className} min-h-screen antialiased`}>
         <HeroUIProvider>
+          <SplashScreen />
           <Navbar />
           <main>{children}</main>
           <Footer />

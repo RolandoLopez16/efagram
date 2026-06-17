@@ -114,6 +114,7 @@ export function HomeHero() {
               height={280}
               src={assetPaths.harvester}
               width={460}
+              priority
             />
           </div>
 
@@ -124,6 +125,7 @@ export function HomeHero() {
               height={260}
               src="/images/bosque-pinos-vertical.webp"
               width={460}
+              priority
             />
           </div>
         </div>

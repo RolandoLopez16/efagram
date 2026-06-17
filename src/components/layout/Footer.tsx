@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 import { company } from "@/data/company";
 import { navigation } from "@/data/navigation";
@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="bg-forest-900 text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_1.3fr_1fr] lg:items-start lg:px-8">
         <div>
-          <Image alt="EFAGRAM S.A.S." className="mb-4 h-11 w-auto object-contain" height={44} src={assetPaths.logoWhite} width={155} />
+          <Image alt="EFAGRAM S.A.S." className="mb-4 h-auto w-auto object-contain" height={48} src={assetPaths.logoWhite} width={220} />
           <p className="max-w-xs text-sm leading-6 text-white/70">Gestión forestal y agroambiental con operación responsable en territorios rurales.</p>
         </div>
         <div>
@@ -39,7 +39,7 @@ export function Footer() {
           <h3 className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-white">Contacto</h3>
           <div className="grid gap-3 text-sm text-white/75">
             <a className="inline-flex items-center gap-2 hover:text-white" href={company.whatsappUrl} target="_blank" rel="noopener noreferrer">
-              <MessageCircle size={16} /> WhatsApp {company.whatsapp}
+              <Image alt="WhatsApp" height={16} src="/images/whatsapp-svgrepo-com.svg" width={16} /> WhatsApp {company.whatsapp}
             </a>
             <a className="inline-flex items-center gap-2 hover:text-white" href={company.phoneHref}>
               <Phone size={16} /> Llamar
