@@ -52,6 +52,8 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-white/60">
         © {new Date().getFullYear()} {company.name}. Gestión forestal responsable y sostenible.
+        <br />
+        Desarrollado por: <a href="https://foresync.online" className="underline hover:text-white" target="_blank" rel="noopener noreferrer">Foresync.online</a>
       </div>
     </footer>
   );
