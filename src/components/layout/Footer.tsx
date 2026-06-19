@@ -11,7 +11,7 @@ export function Footer() {
     <footer className="bg-forest-900 text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-8 sm:px-6 lg:grid-cols-[1.2fr_0.8fr_1.3fr_1fr] lg:items-start lg:px-8">
         <div>
-          <Image alt="EFAGRAM S.A.S." className="mb-4 h-auto w-auto object-contain" height={48} src={assetPaths.logoWhite} width={220} />
+          <Image alt="EFAGRAM S.A.S." className="mb-4 h-auto w-auto object-contain" height={48} src={assetPaths.logoWhite} width={220} style={{ width: "auto", height: "auto" }} />
           <p className="max-w-xs text-sm leading-6 text-white/70">Gestión forestal y agroambiental con operación responsable en territorios rurales.</p>
         </div>
         <div>

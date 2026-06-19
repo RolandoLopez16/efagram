@@ -4,11 +4,14 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 export function SplashScreen() {
-  const [show, setShow] = useState(() => typeof window !== "undefined" && !sessionStorage.getItem("efagram-loaded"));
+  const [show, setShow] = useState(true);
   const timerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   useEffect(() => {
-    if (!show) return;
+    if (sessionStorage.getItem("efagram-loaded")) {
+      setShow(false);
+      return;
+    }
 
     timerRef.current = setTimeout(() => {
       setShow(false);
@@ -16,7 +19,7 @@ export function SplashScreen() {
     }, 2000);
 
     return () => clearTimeout(timerRef.current);
-  }, [show]);
+  }, []);
 
   return (
     <div

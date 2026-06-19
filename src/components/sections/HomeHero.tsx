@@ -27,6 +27,7 @@ export function HomeHero() {
             height={48}
             src={assetPaths.logoCompleto}
             width={220}
+            style={{ width: "auto", height: "auto" }}
             priority
           />
           <h1 className="font-alegreya text-4xl font-semibold leading-[0.96] tracking-tight text-forest-900 md:text-6xl xl:text-7xl">

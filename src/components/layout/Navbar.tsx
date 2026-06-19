@@ -17,7 +17,7 @@ export function Navbar() {
     <header className="sticky top-0 z-50 border-b border-forest-100/80 bg-white/90 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         <Link className="flex items-center gap-3" href="/" onClick={() => setIsOpen(false)}>
-          <Image alt="EFAGRAM S.A.S." className="h-12 w-auto object-contain" height={48} src="/images/logo-efagram.webp" width={160} priority />
+          <Image alt="EFAGRAM S.A.S." className="h-12 w-auto object-contain" height={48} src="/images/logo-efagram.webp" width={160} style={{ width: "auto" }} priority />
         </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
