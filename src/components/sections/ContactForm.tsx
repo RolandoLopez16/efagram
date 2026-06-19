@@ -50,84 +50,101 @@ export function ContactForm() {
         <p className="mt-3 text-sm leading-7 text-slate-600">
           Complete los campos y enviaremos su solicitud con un mensaje prellenado por WhatsApp. También puede usar el botón de correo.
         </p>
-        <form className="mt-8 grid gap-5" onSubmit={handleSubmit}>
+        <form className="mt-8 grid gap-6" onSubmit={handleSubmit}>
           <div className="grid gap-5 md:grid-cols-2">
-            <Field label="Nombre completo" fieldId="contact-name">
-              <Input
-                id="contact-name"
-                isRequired
-                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
-                name="name"
-                placeholder="Ej: Juan Pérez"
-                value={form.name}
-                variant="bordered"
-                onValueChange={(value) => updateField("name", value)}
-              />
-            </Field>
-            <Field label="Teléfono de contacto" fieldId="contact-phone">
-              <Input
-                id="contact-phone"
-                isRequired
-                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
-                name="phone"
-                placeholder="Ej: 320 000 0000"
-                type="tel"
-                value={form.phone}
-                variant="bordered"
-                onValueChange={(value) => updateField("phone", value)}
-              />
-            </Field>
-          </div>
-          <Field label="Correo electrónico" fieldId="contact-email">
             <Input
-              id="contact-email"
+              id="contact-name"
               isRequired
-                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
-                name="email"
-              placeholder="correo@empresa.com"
-              type="email"
-              value={form.email}
+              label="Nombre completo"
+              labelPlacement="outside"
+              classNames={{
+                label: "text-slate-700 font-semibold text-sm",
+                input: "text-slate-900",
+                inputWrapper: "border-slate-200 focus-within:!border-forest-500 hover:!border-forest-400 bg-white",
+              }}
+              name="name"
+              placeholder="Ej: Juan Pérez"
+              value={form.name}
               variant="bordered"
-              onValueChange={(value) => updateField("email", value)}
+              onValueChange={(value) => updateField("name", value)}
             />
-          </Field>
-          <Field label="Mensaje o solicitud" fieldId="contact-message">
-            <Textarea
-              id="contact-message"
+            <Input
+              id="contact-phone"
               isRequired
-                classNames={{ input: "text-slate-900", inputWrapper: "bg-gradient-to-br from-forest-50 to-forest-100" }}
-                minRows={5}
-                name="message"
-              placeholder="Cuente brevemente su solicitud"
-              value={form.message}
+              label="Teléfono de contacto"
+              labelPlacement="outside"
+              classNames={{
+                label: "text-slate-700 font-semibold text-sm",
+                input: "text-slate-900",
+                inputWrapper: "border-slate-200 focus-within:!border-forest-500 hover:!border-forest-400 bg-white",
+              }}
+              name="phone"
+              placeholder="Ej: 320 000 0000"
+              type="tel"
+              value={form.phone}
               variant="bordered"
-              onValueChange={(value) => updateField("message", value)}
+              onValueChange={(value) => updateField("phone", value)}
             />
-          </Field>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <Button color="primary" radius="full" size="lg" startContent={<Send size={18} />} type="submit">
+          </div>
+          <Input
+            id="contact-email"
+            isRequired
+            label="Correo electrónico"
+            labelPlacement="outside"
+            classNames={{
+              label: "text-slate-700 font-semibold text-sm",
+              input: "text-slate-900",
+              inputWrapper: "border-slate-200 focus-within:!border-forest-500 hover:!border-forest-400 bg-white",
+            }}
+            name="email"
+            placeholder="correo@empresa.com"
+            type="email"
+            value={form.email}
+            variant="bordered"
+            onValueChange={(value) => updateField("email", value)}
+          />
+          <Textarea
+            id="contact-message"
+            isRequired
+            label="Mensaje o solicitud"
+            labelPlacement="outside"
+            classNames={{
+              label: "text-slate-700 font-semibold text-sm",
+              input: "text-slate-900",
+              inputWrapper: "border-slate-200 focus-within:!border-forest-500 hover:!border-forest-400 bg-white",
+            }}
+            minRows={5}
+            name="message"
+            placeholder="Cuente brevemente su solicitud"
+            value={form.message}
+            variant="bordered"
+            onValueChange={(value) => updateField("message", value)}
+          />
+          <div className="grid gap-4 sm:grid-cols-2 mt-2">
+            <Button
+              className="bg-[#25D366] text-white hover:bg-[#20ba5a] font-semibold shadow-lg shadow-green-500/10 hover:shadow-green-500/20 hover:scale-[1.01] active:scale-[0.99] transition-all"
+              radius="full"
+              size="lg"
+              startContent={<Send size={18} />}
+              type="submit"
+            >
               Enviar por WhatsApp
             </Button>
-            <Button as="a" href={emailHref} radius="full" size="lg" startContent={<Mail size={18} />} variant="bordered">
+            <Button
+              as="a"
+              href={emailHref}
+              color="secondary"
+              variant="solid"
+              className="font-semibold shadow-lg shadow-amber-900/10 hover:scale-[1.01] active:scale-[0.99] transition-all text-white"
+              radius="full"
+              size="lg"
+              startContent={<Mail size={18} />}
+            >
               Enviar correo
             </Button>
           </div>
-          <a className="inline-flex items-center justify-center gap-2 text-sm font-semibold text-forest-700 hover:text-forest-900 sm:justify-start" href={company.whatsappUrl} target="_blank" rel="noopener noreferrer">
-            <Image alt="WhatsApp" height={16} src="/images/whatsapp-svgrepo-com.svg" width={16} /> Abrir WhatsApp sin formulario
-          </a>
         </form>
       </CardBody>
     </Card>
-  );
-}
-
-function Field({ fieldId, label, children }: { fieldId: string; label: string; children: ReactNode }) {
-  return (
-    <div className="grid gap-2">
-      <label className="text-sm font-semibold text-slate-700" htmlFor={fieldId}>
-        {label} <span className="text-red-600">*</span>
-      </label>
-      {children}
-    </div>
   );
 }
