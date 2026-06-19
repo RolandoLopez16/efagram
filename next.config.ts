@@ -27,7 +27,7 @@ const securityHeaders = [
   },
   {
     key: "Content-Security-Policy",
-    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self';",
+    value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: *; font-src 'self' data: *; connect-src 'self' *; worker-src 'self' blob:; child-src blob:; frame-src 'self' https://www.google.com;",
   },
 ];
 

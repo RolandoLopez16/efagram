@@ -5,6 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { company } from "@/data/company";
 import { navigation } from "@/data/navigation";
 import { assetPaths } from "@/lib/constants";
+import { FooterMapLink } from "@/components/ui/FooterMapLink";
 
 export function Footer() {
   return (
@@ -31,9 +32,7 @@ export function Footer() {
             barrio Bellavista, Popayán<br />
             Cauca, Colombia
           </p>
-          <a className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-emerald-100 hover:text-white" href={company.mapsUrl} target="_blank" rel="noopener noreferrer">
-            <MapPin size={16} /> Ver ubicación
-          </a>
+          <FooterMapLink />
         </div>
         <div>
           <h3 className="mb-3 text-sm font-bold uppercase tracking-[0.16em] text-white">Contacto</h3>

@@ -9,7 +9,7 @@ export const company = {
   whatsappUrl: "https://wa.me/573206758351",
   phoneHref: "tel:+573206758351",
   emailHref: "mailto:gerencia@efagram.com",
-  mapsUrl: "https://www.google.com/maps/search/?api=1&query=Transversal%209%20%2360AN-41%20Popayan%20Cauca%20Colombia",
+  mapsUrl: "https://www.google.com/maps/search/?api=1&query=2.4829167,-76.5773056",
   siteUrl: "https://www.efagram.com",
   email: "gerencia@efagram.com",
   tagline: "Establecimiento, mantenimiento y cosecha de bosques",

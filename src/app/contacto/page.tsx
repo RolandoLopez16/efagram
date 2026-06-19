@@ -6,6 +6,7 @@ import type { ReactNode } from "react";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { ForestBackground } from "@/components/ui/ForestBackground";
 import { PageHeader } from "@/components/ui/PageHeader";
+import { MapCard } from "@/components/ui/MapCard";
 import { company } from "@/data/company";
 
 export const metadata: Metadata = {
@@ -23,11 +24,7 @@ export default function ContactoPage() {
             <ContactInfo external icon={<MapPin size={22} />} title="Oficina principal" text={company.fullAddress} href={company.mapsUrl} />
             <ContactInfo external icon={<Image alt="WhatsApp" height={22} src="/images/whatsapp-svgrepo-com.svg" width={22} />} title="WhatsApp" text={company.whatsapp} href={company.whatsappUrl} />
             <ContactInfo icon={<Mail size={22} />} title="Correo" text={company.email} href={company.emailHref} />
-            <a className="rounded-[2rem] bg-forest-900 p-6 text-white transition hover:-translate-y-1 hover:shadow-soft" href={company.mapsUrl} target="_blank" rel="noopener noreferrer">
-              <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white shadow-sm"><MapPin size={22} /></span>
-              <h2 className="font-alegreya text-2xl font-semibold">Ver ubicación</h2>
-              <p className="mt-2 text-sm leading-7 text-white/70">Abrir dirección en Google Maps.</p>
-            </a>
+            <MapCard />
           </div>
           <ContactForm />
         </div>

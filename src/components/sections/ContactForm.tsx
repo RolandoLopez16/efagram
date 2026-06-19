@@ -122,10 +122,11 @@ export function ContactForm() {
           />
           <div className="grid gap-4 sm:grid-cols-2 mt-2">
             <Button
-              className="bg-[#25D366] text-white hover:bg-[#20ba5a] font-semibold shadow-lg shadow-green-500/10 hover:shadow-green-500/20 hover:scale-[1.01] active:scale-[0.99] transition-all"
+              className="font-semibold shadow-lg hover:scale-[1.01] active:scale-[0.99] transition-all"
+              style={{ backgroundColor: "#25D366", color: "white" }}
               radius="full"
               size="lg"
-              startContent={<Send size={18} />}
+              startContent={<Image src="/images/whatsapp-svgrepo-com.svg" width={20} height={20} alt="WhatsApp" className="brightness-0 invert" />}
               type="submit"
             >
               Enviar por WhatsApp
@@ -135,10 +136,10 @@ export function ContactForm() {
               href={emailHref}
               color="secondary"
               variant="solid"
-              className="font-semibold shadow-lg shadow-amber-900/10 hover:scale-[1.01] active:scale-[0.99] transition-all text-white"
+              className="font-semibold shadow-lg text-white hover:scale-[1.01] active:scale-[0.99] transition-all"
               radius="full"
               size="lg"
-              startContent={<Mail size={18} />}
+              startContent={<Mail size={20} />}
             >
               Enviar correo
             </Button>
