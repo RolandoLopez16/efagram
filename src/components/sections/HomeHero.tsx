@@ -90,7 +90,7 @@ export function HomeHero() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-[1.4fr_1fr]">
-          <div className="relative row-span-2 overflow-hidden rounded-[2.5rem] bg-forest-900 shadow-soft transition duration-500 hover:-translate-y-1">
+          <div className="relative row-span-2 h-72 sm:h-96 md:h-full overflow-hidden rounded-[2.5rem] bg-forest-900 shadow-soft transition duration-500 hover:-translate-y-1">
             <Image
               alt="Vista aérea de plantaciones forestales operadas por EFAGRAM S.A.S."
               className="h-full w-full object-cover opacity-95 transition duration-700 hover:scale-105"
@@ -108,7 +108,7 @@ export function HomeHero() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-soft transition duration-500 hover:-translate-y-1">
+          <div className="hidden md:block overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-soft transition duration-500 hover:-translate-y-1">
             <Image
               alt="Operación forestal con maquinaria especializada"
               className="h-52 w-full object-cover transition duration-700 hover:scale-105"
@@ -119,7 +119,7 @@ export function HomeHero() {
             />
           </div>
 
-          <div className="overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-soft transition duration-500 hover:-translate-y-1">
+          <div className="hidden md:block overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-soft transition duration-500 hover:-translate-y-1">
             <Image
               alt="Bosque de pinos en zona de operación forestal de EFAGRAM S.A.S."
               className="h-44 w-full object-cover transition duration-700 hover:scale-105"
